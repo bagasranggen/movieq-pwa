@@ -1,0 +1,28 @@
+@import "../../scss/core.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.FormWrapper {
+  @extend .row;
+  align-self: stretch;
+
+  .Form {
+    @extend .col-12, .offset-lg-3, .col-lg-6;
+  }
+  .Form__input {
+    @extend .form-control, .my-3;
+    background-color: rgba(white, 0.4);
+    text-align: center;
+    border-radius: 55px;
+    min-height: 50px;
+    border-color: transparent;
+    transition: 0.3s;
+    &::placeholder {
+      color: #fff;
+    }
+    &:focus {
+      color: $red;
+      border-color: white;
+      box-shadow: 0 0 4px white;
+    }
+  }
+}

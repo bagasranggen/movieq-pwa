@@ -1,0 +1,23 @@
+@import "../../scss/core.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.HeaderWrapper {
+  @extend %bg-gradient-primary, .py-2, .text-white;
+  position: relative;
+
+  //   .circleGradient {
+  //     @extend %bg-gradient-primary;
+  //     position: absolute;
+  //     display: block;
+  //     width: 100%;
+  //     height: 250px;
+  //   }
+}
+
+.Header {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}

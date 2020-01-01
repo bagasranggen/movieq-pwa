@@ -1,0 +1,31 @@
+@import "../../../scss/core.scss";
+
+.logoNav {
+  max-height: 60px;
+}
+
+.logoFront {
+  height: 150px;
+}
+
+.logoFront__wrapper {
+  margin-bottom: 50px;
+}
+
+.logoFront__wrapperCenter {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  color: white;
+  text-align: center;
+
+  &Inline {
+    @extend .logoText, %fs-20, %fw-bold;
+  }
+
+  &Below {
+    @extend .logoText, %fs-38, %fw-bold;
+  }
+}

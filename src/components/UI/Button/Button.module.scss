@@ -1,0 +1,17 @@
+@import "../../../scss/core.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.MainBtn {
+  @extend .form-control, .my-3;
+  background-color: #fff;
+
+  &Form {
+    @extend .MainBtn;
+    min-height: 50px;
+    border-radius: 55px;
+    font-weight: bold;
+    &:hover {
+      color: $red;
+    }
+  }
+}

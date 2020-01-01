@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+$gradient-top: #ff6d5a;
+$gradient-bottom: #ff4158;
+$gray: #999;
+
+// BG COLOR
+%bg-gradient-primary {
+  background-image: linear-gradient(to bottom, $gradient-top, $gradient-bottom);
+}
+// END BG COLOR
+
+// FONT
+%fs-38 {
+  font-size: 38px;
+}
+%fs-20 {
+  font-size: 20px;
+}
+%fs-18 {
+  font-size: 18px;
+}
+%fw-bold {
+  font-weight: bold;
+}
+%fc-gray {
+  color: $gray;
+}
+// END FONT

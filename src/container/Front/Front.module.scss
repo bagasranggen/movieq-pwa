@@ -1,0 +1,15 @@
+@import "../../scss/core.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.frontWrapper {
+  @extend %bg-gradient-primary;
+
+  .front {
+    @extend .container;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

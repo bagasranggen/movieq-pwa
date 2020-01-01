@@ -1,0 +1,44 @@
+.Form {
+  display: flex;
+  justify-content: flex-end;
+  width: min-content;
+
+  .Input {
+    outline: none;
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+    background: url('../../../../assets/logo/search-white.svg')
+      99% center/20px no-repeat;
+    padding: 9px 35px 9px 15px;
+    width: 0%;
+    cursor: pointer;
+    border: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  
+    &:focus {
+      width: 100%;
+      background-color: #fff;
+      background-image: url('../../../../assets/logo/search-red.svg');
+      border-color: #66cc75;
+      
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+  
+      -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+      -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+      box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+    }
+  
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+}
+
