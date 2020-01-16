@@ -7,14 +7,12 @@ import Home from './container/Home';
 import Front from './container/Front';
 import Movie from './container/Movie';
 
-
 function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Switch>
         <Route exact path="/" component={Front} />
         <Route path="/home" component={Home} />
-        {/* <Route path="/movie" render={() => <Movie>Godzilla</Movie>} /> */}
         <Route path="/movie" component={Movie} />
       </Switch>
     </div>
