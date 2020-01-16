@@ -2,16 +2,29 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
 .HeaderWrapper {
-  @extend %bg-gradient-primary, .py-2, .text-white;
+  @extend .py-2, .text-white;
   position: relative;
 
-  //   .circleGradient {
-  //     @extend %bg-gradient-primary;
-  //     position: absolute;
-  //     display: block;
-  //     width: 100%;
-  //     height: 250px;
-  //   }
+    .circleGradient {
+      @extend %bg-gradient-primary;
+      position: absolute;
+      width: 180%;
+      height: 270px;
+      border-radius: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+
+      &Hidden {
+        @extend .circleGradient;
+        top: -180px;
+      }
+
+      &Expanded {
+        @extend .circleGradient;
+        top: -60px;
+      }
+    }
 }
 
 .Header {

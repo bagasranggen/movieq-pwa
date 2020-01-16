@@ -1,0 +1,15 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '../../../../scss/core.scss';
+@import '../../../../scss/responsive.scss';
+
+.DetailBadge {
+    @extend .px-md-3, .mr-1, .mr-md-2, .my-1, .text-white;
+    background-color: #a3c12d;
+    border-radius: 15px;
+    padding: 2px 5px;
+    font-size: 12px;
+
+    @include responsive('md') {
+        font-size: 16px;
+    }
+}

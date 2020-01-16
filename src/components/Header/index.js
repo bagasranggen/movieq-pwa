@@ -11,16 +11,13 @@ class Header extends Component {
         searhExpanded: false
     }
 
-    seacrhExpandedHandler = () => {
+    searchExpandedHandler = () => {
         this.setState({ searhExpanded: true });
-
-        console.log('yay')
     };
-    seacrhExpandedHandlerss = () => {
+    searchReturn = () => {
         setTimeout(() => {
             this.setState({ searhExpanded: false })
         }, 300);
-        console.log('yayo')
     };
 
 
@@ -30,25 +27,24 @@ class Header extends Component {
 
         if (this.state.searhExpanded) {
             logo = null;
-                style = {width: '100%'};
-            // setTimeout(() => {
-            //     style = {width: '100%'};
-            // }, 300)
+            style = { width: '100%' };
         } else {
             logo = [<MenuBurger />, <Logo type="logoFront__wrapperCenter" typeLogo="logoNav">MovieQ</Logo>];
-            // setTimeout(() => {
-            //     style = null;
-            // }, 300)
             style = null;
         }
 
         return (
             <div className={classes.HeaderWrapper}>
-                <div className={classes.circleGradient}></div>
+                <div className={classes[this.props.type]}></div>
                 <div className={classes.Header}>
                     {logo}
-                    <Search clicked={this.seacrhExpandedHandler}
-                        blurred={this.seacrhExpandedHandlerss} style={style}/>
+                    <Search 
+                        onSubmit={this.props.onSubmit}
+                        onChange={this.props.onChange}
+                        value={this.props.value}
+                        clicked={this.searchExpandedHandler}
+                        blurred={this.searchReturn}
+                        style={style} />
                 </div>
             </div>
         );

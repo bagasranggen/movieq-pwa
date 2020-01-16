@@ -1,0 +1,16 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../scss/core.scss";
+
+.Detail {
+    @extend .py-1;
+    display: flex;
+
+    &Title {
+        flex-basis: 30%;
+    }
+
+    &Content {
+        @extend .font-weight-bold;
+        flex-basis: 70%;
+    }
+}

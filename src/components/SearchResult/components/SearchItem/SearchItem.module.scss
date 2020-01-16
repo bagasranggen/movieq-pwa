@@ -1,5 +1,6 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../../../scss/core.scss";
+@import "../../../../scss/responsive.scss";
 
 .SearchItem {
   @extend .col-6, .col-lg-3, .mb-3;
@@ -7,6 +8,11 @@
   .ImgWrapper {
     @extend .w-100;
     overflow: hidden;
+    height: 200px;
+
+    @include responsive('md') {
+      height: auto;
+    }
 
     .Img {
       @extend .w-100;

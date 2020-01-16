@@ -1,11 +1,26 @@
 @import "../../../scss/core.scss";
+@import "../../../scss/responsive.scss";
+
+.logoAnchor {
+  &:hover {
+    text-decoration: none;
+  }
+}
 
 .logoNav {
-  max-height: 60px;
+  max-height: 50px;
+
+  @include responsive('md') {
+    max-height: 60px;
+  }
 }
 
 .logoFront {
-  height: 150px;
+  height: 140px;
+
+  @include responsive('md') {
+    height: 150px;
+  }
 }
 
 .logoFront__wrapper {
@@ -22,10 +37,20 @@
   text-align: center;
 
   &Inline {
-    @extend .logoText, %fs-20, %fw-bold;
+    @extend .logoText, %fw-bold;
+    @include fs-18;
+
+    @include responsive('md') {
+      @include fs-20;
+    }
   }
 
   &Below {
-    @extend .logoText, %fs-38, %fw-bold;
+    @extend .logoText, %fw-bold;
+    @include fs-34;
+
+    @include responsive('md') {
+      @include fs-38;
+    }
   }
 }

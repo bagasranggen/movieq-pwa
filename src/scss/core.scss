@@ -7,6 +7,7 @@
 $gradient-top: #ff6d5a;
 $gradient-bottom: #ff4158;
 $gray: #999;
+$gold: #a78a4e;
 
 // BG COLOR
 %bg-gradient-primary {
@@ -18,10 +19,22 @@ $gray: #999;
 %fs-38 {
   font-size: 38px;
 }
+@mixin fs-38 {
+  font-size: 38px;
+}
+@mixin fs-34 {
+  font-size: 34px;
+}
 %fs-20 {
   font-size: 20px;
 }
+@mixin fs-20 {
+  font-size: 20px;
+}
 %fs-18 {
+  font-size: 18px;
+}
+@mixin fs-18 {
   font-size: 18px;
 }
 %fw-bold {
@@ -31,3 +44,21 @@ $gray: #999;
   color: $gray;
 }
 // END FONT
+
+// MARGIN
+%mr-8px {
+  margin-right: 8px;
+}
+// END MARGIN
+
+// SHADOW
+%light-shadow {
+  box-shadow: 0 0.3rem .8rem rgba(0, 0, 0, 0.15);
+}
+// END SHADOW
+
+// BORDER
+%border-12px {
+  border-radius: 12px;
+}
+// END BORDER

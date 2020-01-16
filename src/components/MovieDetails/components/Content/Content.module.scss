@@ -1,0 +1,23 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '../../../../scss/core.scss';
+@import '../../../../scss/responsive.scss';
+
+.Content {
+    @extend .p-3, .mb-4, %light-shadow, %border-12px;
+    font-size: 14px;
+
+    @include responsive('md') {
+        font-size: 16px;
+    }
+
+    &Star {
+        @extend .Content, .text-center, .font-weight-bold;
+        color: $gold;
+        background: url("../../../../assets/bg/bg-star.png") top left/70px no-repeat;
+    }
+
+    &Description {
+        @extend .Content;
+        text-align: justify;
+    }
+}
