@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './DetailsHead.module.scss'
 
 import DetailMuted from '../DetailMuted';
@@ -10,7 +10,7 @@ const DetailsHead = (props) => {
 
     useEffect(() => {
         const currentUrl = window.location.href.split('=');
-        fetch('http://www.omdbapi.com/?apikey=189e4142&i=' + currentUrl[1])
+        fetch('https://www.omdbapi.com/?apikey=189e4142&i=' + currentUrl[1])
             .then(response => response.json())
             .then(data => {
                 setMovieGenre(data.Genre.split(','))

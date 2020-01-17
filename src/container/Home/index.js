@@ -20,7 +20,7 @@ const Home = (props) => {
 
         setIsLoad(true)
 
-        fetch('http://www.omdbapi.com/?apikey=189e4142&s=' + currentUrl[1])
+        fetch('https://www.omdbapi.com/?apikey=189e4142&s=' + currentUrl[1])
             .then(response => response.json())
             .then(data => setMovies(data.Search));
 
@@ -38,7 +38,7 @@ const Home = (props) => {
         setUserKey(search)
 
         props.history.push('/home?=' + search);
-        fetch('http://www.omdbapi.com/?apikey=189e4142&s=' + search)
+        fetch('https://www.omdbapi.com/?apikey=189e4142&s=' + search)
             .then(response => response.json())
             .then(data => setMovies(data.Search));
 

@@ -18,7 +18,7 @@ const MovieDetails = () => {
 
         setIsLoad(true);
 
-        fetch('http://www.omdbapi.com/?apikey=189e4142&i=' + currentUrl[1])
+        fetch('https://www.omdbapi.com/?apikey=189e4142&i=' + currentUrl[1])
             .then(response => response.json())
             .then(data => {
                 setMovieDetails(data)
