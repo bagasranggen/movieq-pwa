@@ -28,27 +28,64 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>MovieQ</title>
   <style type="text/css">
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
+    .bg-gradient-primary {
+      min-height: 100%;
+      background: linear-gradient(#ff6d5a, #ff4158);
     }
 
-    .navbar {
-      background-color: #01C8E5;
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      min-height: -webkit-fill-available;
+      -webkit-box-align: center;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 20vh;
+      padding-bottom: 10vh;
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-box {
+      min-width: 250px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: rgb(255, 255, 255) 0px 0px 1px 0.5px;
+      color: rgb(255, 255, 255);
       text-align: center;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      border-radius: 20px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in 0s;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
     }
 
-    .navbar a {
-      display: inline-block;
-      padding: 10px;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .page-info {
+    .btn-search {
+      margin-top: 1.5rem;
+      min-width: 250px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 2px 2px;
+      color: rgb(101, 101, 101);
       text-align: center;
-      font-weight: bold;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border-radius: 20px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in 0s;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
     }
   </style>
 </head>
@@ -56,12 +93,19 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root">
-    <div class="navbar">
-      <a href="/">Feed</a>
+    <div class="bg-gradient-primary">
+      <div class="content-wrapper">
+        <picture>
+          <source srcset="%PUBLIC_URL%/logo192.png">
+          <img src="%PUBLIC_URL%/logo.png" alt="Logo">
+        </picture>
+
+        <form class="form-wrapper">
+          <input type="text" name="title" id="title" placeholder="Search Movie Title" class="search-box" value="">
+          <button type="submit" class="btn-search">SEARCH</button>
+        </form>
+      </div>
     </div>
-    <p class="page-info">
-      Loading an awesome app...
-    </p>
   </div>
   <!--
       This HTML file is a template.
