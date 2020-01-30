@@ -7,6 +7,7 @@
 $gradient-top: #ff6d5a;
 $gradient-bottom: #ff4158;
 $gray: #999;
+$light-gray: #ddd;
 $gold: #a78a4e;
 
 // BG COLOR
@@ -53,7 +54,7 @@ $gold: #a78a4e;
 
 // SHADOW
 %light-shadow {
-  box-shadow: 0 0.3rem .8rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.15);
 }
 // END SHADOW
 

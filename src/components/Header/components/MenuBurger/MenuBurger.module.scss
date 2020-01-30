@@ -1,11 +1,18 @@
+@import "../../../../scss/responsive.scss";
+
 .MenuBurger {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  cursor: pointer;
   padding: 10px;
-  max-width: 90px;
+  max-width: 70px;
   //   max-height: 25px;
-  //   max-width: 25px;
+  // max-width: 25px;
+
+  // @include responsive("md") {
+  //   max-width: 55px;
+  // }
   &:hover {
     .MenuBurger__iconLeft,
     .MenuBurger__iconRight {

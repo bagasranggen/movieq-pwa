@@ -1,31 +1,41 @@
 @import "../../scss/core.scss";
+@import "../../scss/responsive.scss";
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
 .HeaderWrapper {
-  @extend .py-2, .text-white;
+  @extend .py-2,
+  .text-white;
   position: relative;
 
-    .circleGradient {
-      @extend %bg-gradient-primary;
-      position: absolute;
-      width: 180%;
-      height: 270px;
-      border-radius: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      box-shadow: 0 2px 12px 0 #ff6d5a;
-      z-index: -1;
+  .circleGradient {
+    @extend %bg-gradient-primary;
+    position: absolute;
+    width: 130%;
+    height: 80px;
+    border-radius: 0 0 100% 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 12px 0 #ff6d5a;
+    z-index: -1;
 
-      &Hidden {
-        @extend .circleGradient;
-        top: -180px;
+    &Hidden {
+      @extend .circleGradient;
+      // top: -180px;
+    }
+
+    &Expanded {
+      @extend .circleGradient;
+      height: 260px;
+
+      @include responsive('sm') {
+        height: 210px;
       }
-
-      &Expanded {
-        @extend .circleGradient;
-        top: -60px;
+      @include responsive('lg') {
+        height: 185px;
       }
     }
+  }
 }
 
 .Header {

@@ -2,6 +2,29 @@
 @import "../../../../scss/core.scss";
 @import "../../../../scss/responsive.scss";
 
+.HeadImage {
+
+  &__wrapper {
+    overflow: hidden;
+    max-height: 195px;
+
+
+    @include responsive('sm') {
+      max-height: 265px;
+    }
+    @include responsive('md') {
+      max-height: 405px;
+    }
+    @include responsive('lg') {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      max-height: 650px;
+    }
+  }
+
+}
+
 .HeadContent {
   // @extend .mt-2;
   margin-top: .2rem;
@@ -29,6 +52,11 @@
     &Rating {
       @extend .HeadDetail;
       justify-content: space-between;
+    }
+
+    &Genre {
+      @extend .HeadDetail;
+      margin-top: 35px;
     }
   }
 }

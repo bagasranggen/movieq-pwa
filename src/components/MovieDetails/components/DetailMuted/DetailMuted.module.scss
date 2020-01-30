@@ -6,13 +6,15 @@
     @extend .text-white;
     font-size: 12px;
     opacity: .6;
-    flex-basis: 65px;
+    flex-basis: auto;
+    margin-right: 15px;
+    padding: 0 3px;
     margin-bottom: 8px;
 
     @include responsive('md') {
         font-size: 16px;
-        flex-basis: 80px;
     }
+
     .Icon {
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -22,21 +24,27 @@
         -moz-osx-font-smoothing: grayscale;
 
         &Calendar {
-            @extend .Icon, %mr-8px;
+            @extend .Icon,
+            %mr-8px;
+
             &::before {
                 content: "\f073";
             }
         }
 
         &Clock {
-            @extend .Icon, %mr-8px;
+            @extend .Icon,
+            %mr-8px;
+
             &::before {
                 content: "\f017";
             }
         }
 
         &Info {
-            @extend .Icon, %mr-8px;
+            @extend .Icon,
+            %mr-8px;
+
             &::before {
                 content: "\f059";
             }
