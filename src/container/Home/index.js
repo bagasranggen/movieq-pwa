@@ -28,8 +28,8 @@ const Home = props => {
         setMovies(response.Search);
       } catch (error) {
         // DO SOMETHING
-        alert(error);
-        props.history.push("/");
+        // alert(error);
+        // props.history.push("/");
       } finally {
         setIsLoad(true);
       }

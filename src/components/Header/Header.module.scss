@@ -26,7 +26,7 @@
 
     &Expanded {
       @extend .circleGradient;
-      height: 260px;
+      height: 230px;
 
       @include responsive('sm') {
         height: 210px;
